@@ -1,8 +1,16 @@
 <?php
 
-$uri = $_SERVER['REQUEST_URI'];
+use App\Request;
+use App\Main;
+
+$request = Request::get_instance();
+
+$main_class = Main::get_instance();
+$main_class->set_request($request);
+
+$response = $main_class->handling()->get_response();
 
 
-echo "<pre>";
-var_dump($uri);
-echo "</pre>";
+echo $response->send();
+
+

@@ -2,13 +2,15 @@
 
 namespace App\Controller;
 
-class Rest
-{
-    public function action_save_users(){
+use App\Controller\Base;
 
+class Rest extends Base
+{
+    public function save_users(){
+        return 'save_users';
     }
 
-    public function action_get_users(){
-
+    public function get_users(){
+        return 'get_users';
     }
 }

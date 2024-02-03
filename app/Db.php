@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 class Db{
@@ -6,7 +7,6 @@ class Db{
     private function __construct(){
 
     }
-
     public static function get_instance(){
         return self::$instance ?: new self();
     }
